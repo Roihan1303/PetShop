@@ -67,7 +67,7 @@
                                 {{ auth()->user()->name }}
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="">My Profile</a></li>
+                                <li><a class="dropdown-item" href="{{ route('profile') }}">My Profile</a></li>
                                 <li><a class="dropdown-item" href="{{ route('logout') }}">Sign Out</a></li>
                             </ul>
                         </li>

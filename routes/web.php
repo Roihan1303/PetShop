@@ -27,7 +27,8 @@ Route::post('prosesRegister', [AuthController::class, 'prosesRegister'])->name('
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('dashboard', [PageController::class, 'dashboard'])->name('dashboard');
-Route::get('dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+Route::get('profile', [PageController::class, 'profile'])->name('profile');
+Route::put('updateProfile/{user}', [PageController::class, 'updateProfile'])->name('updateProfile');
 
 //Hewan
 Route::resource('hewan', HewanController::class);
