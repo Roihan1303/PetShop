@@ -36,3 +36,4 @@ Route::resource('hewan', HewanController::class);
 
 //Order
 Route::get('order/{hewan}', [OrderController::class, 'index'])->name('order.index');
+Route::post('order/{hewan}', [OrderController::class, 'store'])->name('order.store');

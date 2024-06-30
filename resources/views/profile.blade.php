@@ -47,11 +47,4 @@
                 </div>
             </div>
     </main>
-    @if (session('message'))
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                Swal.fire("{{ session('message') }}", '', 'success');
-            });
-        </script>
-    @endif
 @endsection

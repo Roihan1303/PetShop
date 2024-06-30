@@ -79,6 +79,14 @@
 
     @yield('content')
 
+    @if (session('message'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Swal.fire("{{ session('message') }}", '', 'success');
+            });
+        </script>
+    @endif
+
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/sweetalert2@11.js') }}"></script>
 </body>

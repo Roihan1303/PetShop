@@ -15,4 +15,10 @@ class Hewan extends Model
         'gambar',
         'status'
     ];
+
+    // Relasi ke model Order
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

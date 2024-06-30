@@ -24,6 +24,12 @@ class User extends Authenticatable
         'isAdmin'
     ];
 
+    // Relasi ke model Order
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

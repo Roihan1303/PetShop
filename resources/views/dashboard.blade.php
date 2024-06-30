@@ -54,8 +54,12 @@
                                             Rp. {{ $hewan->harga }}
                                         </p>
                                         @if (auth()->user()->isAdmin == 0)
-                                            <a href="{{ route('order.index', ['hewan' => $hewan->id]) }}"
-                                                class="btn btn-primary">Order</a>
+                                            @if ($hewan->status == 'Avaliable')
+                                                <a href="{{ route('order.index', ['hewan' => $hewan->id]) }}"
+                                                    class="btn btn-primary">Order</a>
+                                            @else
+                                                <button type="button" class="btn btn-danger">Sold</button>
+                                            @endif
                                         @endif
                                     </div>
                                 </div>
