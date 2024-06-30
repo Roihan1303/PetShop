@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HewanController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +33,6 @@ Route::put('updateProfile/{user}', [PageController::class, 'updateProfile'])->na
 
 //Hewan
 Route::resource('hewan', HewanController::class);
+
+//Order
+Route::get('order/{hewan}', [OrderController::class, 'index'])->name('order.index');
