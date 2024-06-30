@@ -44,4 +44,31 @@
     </main>
 
     <script src="{{ asset('assets/js/datatables.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            // DataTable Initialization
+            $('.table').DataTable();
+
+            // Delete Button On Click
+            $('.delete-hewan button.deleteButton').click((e) => {
+                e.preventDefault();
+
+                const hewanId = $(e.target).data('hewan-id');
+
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $(`#deleteForm_${hewanId}`).submit();
+                    }
+                });
+            });
+        });
+    </script>
 @endsection
