@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HewanController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,7 @@ Route::post('prosesRegister', [AuthController::class, 'prosesRegister'])->name('
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+Route::get('dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+
+//Hewan
+Route::resource('hewan', HewanController::class);

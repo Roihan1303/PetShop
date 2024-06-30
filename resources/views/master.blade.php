@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Bike Shop </title>
+    <title> PetShop </title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
     <!-- Shortcut Icon -->
-    <link rel="shortcut icon" href="{{ asset('assets\img\logo2.jpg') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets\img\petshop.png') }}" type="image/x-icon">
 
     <!-- Styles -->
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
@@ -39,8 +39,8 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('dashboard') }}"><img src="{{ asset('assets/img/logo2.jpg') }}"
-                        alt="" height="40" class="rounded-circle"> Bike Shop</a>
+                <a class="navbar-brand" href="{{ route('dashboard') }}"><img src="{{ asset('assets/img/petshop.png') }}"
+                        alt="" height="40" class="rounded-circle"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -51,12 +51,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('dashboard') }}">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Orders</a>
-                        </li>
+                        @if (auth()->user()->isAdmin == 1)
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('hewan.index') }}">Products</a>
+                            </li>
+                        @endif
+                        @if (auth()->user()->isAdmin == 0)
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Orders</a>
+                            </li>
+                        @endif
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
