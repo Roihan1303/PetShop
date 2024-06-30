@@ -28,7 +28,7 @@
                                 <div class="row align-items-center">
                                     <div class="col border-end">
                                         <h3>Orders</h3>
-                                        <p class="text-secondary">1</p>
+                                        <p class="text-secondary">{{ $order->count() }}</p>
                                     </div>
                                     <div class="col-4 text-center">
                                         <h1 class="bi bi-box2"></h1>
