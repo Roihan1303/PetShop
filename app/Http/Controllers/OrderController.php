@@ -27,4 +27,10 @@ class OrderController extends Controller
 
         return redirect()->route('dashboard')->with('message', 'Orderan Berhasil');
     }
+
+    public function myOrder()
+    {
+        $dataOrder = Order::with('hewan')->where('users_id', auth()->user()->id)->get();
+        return view('order.myOrder', compact('dataOrder'));
+    }
 }

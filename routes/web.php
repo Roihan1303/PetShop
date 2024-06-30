@@ -35,5 +35,6 @@ Route::put('updateProfile/{user}', [PageController::class, 'updateProfile'])->na
 Route::resource('hewan', HewanController::class);
 
 //Order
+Route::get('myorder', [OrderController::class, 'myOrder'])->name('myOrder');
 Route::get('order/{hewan}', [OrderController::class, 'index'])->name('order.index');
 Route::post('order/{hewan}', [OrderController::class, 'store'])->name('order.store');

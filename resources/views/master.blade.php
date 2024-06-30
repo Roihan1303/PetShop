@@ -58,7 +58,7 @@
                         @endif
                         @if (auth()->user()->isAdmin == 0)
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Orders</a>
+                                <a class="nav-link" href="{{ route('myOrder') }}">My Order</a>
                             </li>
                         @endif
                         <li class="nav-item dropdown">
