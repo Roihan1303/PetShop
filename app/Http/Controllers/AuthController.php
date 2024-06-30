@@ -34,9 +34,15 @@ class AuthController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
-        $user->isAdmin = 1;
+        $user->isAdmin = 0;
         $user->save();
 
         return redirect(route('login'))->with('success', 'Register Success');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect(route('login'));
     }
 }

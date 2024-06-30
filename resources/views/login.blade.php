@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Bike Shop </title>
+    <title> PetShop </title>
     <link rel="shortcut icon" href="{{ asset('assets\img\logo2.jpg') }}" type="image/x-icon">
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
     <style>
