@@ -55,6 +55,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('hewan.index') }}">Products</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('order.list') }}">Orders</a>
+                            </li>
                         @endif
                         @if (auth()->user()->isAdmin == 0)
                             <li class="nav-item">

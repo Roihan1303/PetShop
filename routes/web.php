@@ -31,10 +31,12 @@ Route::get('dashboard', [PageController::class, 'dashboard'])->name('dashboard')
 Route::get('profile', [PageController::class, 'profile'])->name('profile');
 Route::put('updateProfile/{user}', [PageController::class, 'updateProfile'])->name('updateProfile');
 
+Route::get('myorder', [PageController::class, 'myOrder'])->name('myOrder');
+Route::get('order-list', [PageController::class, 'orderList'])->name('order.list');
+
 //Hewan
 Route::resource('hewan', HewanController::class);
 
 //Order
-Route::get('myorder', [OrderController::class, 'myOrder'])->name('myOrder');
 Route::get('order/{hewan}', [OrderController::class, 'index'])->name('order.index');
 Route::post('order/{hewan}', [OrderController::class, 'store'])->name('order.store');
