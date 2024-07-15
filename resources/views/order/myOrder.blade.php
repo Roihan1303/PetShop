@@ -16,6 +16,7 @@
                                             <th>No</th>
                                             <th></th>
                                             <th>Jenis Hewan</th>
+                                            <th>Jenis Kelamin</th>
                                             <th>Alamat</th>
                                             <th>Pembayaran</th>
                                             <th>Total Harga</th>
@@ -28,6 +29,7 @@
                                                 <td><img src="{{ asset('storage/images/' . $order->hewan->gambar) }}"
                                                         alt="" width="150" class="rounded"></td>
                                                 <td>{{ $order->hewan->jenis_hewan }}</td>
+                                                <td>{{ $order->hewan->jenis_kelamin }}</td>
                                                 <td>{{ $order->alamat }}</td>
                                                 <td>{{ $order->pembayaran }}</td>
                                                 <td>Rp{{ $order->total_harga }}</td>

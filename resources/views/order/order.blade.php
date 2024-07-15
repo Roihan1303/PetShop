@@ -17,6 +17,7 @@
                                     </div>
                                     <div class="col">
                                         <h3 class="m-0">{{ $hewan->jenis_hewan }}</h3>
+                                        <h5>{{ $hewan->jenis_kelamin }}</h5>
                                         <p>Rp. {{ $hewan->harga }}</p>
                                     </div>
                                 </div>

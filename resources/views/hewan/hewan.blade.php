@@ -19,7 +19,8 @@
                                             <th>No</th>
                                             <th></th>
                                             <th>Jenis Hewan</th>
-                                            <th>Hewan</th>
+                                            <th>Jenis Kelamin</th>
+                                            <th>Harga</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -30,6 +31,7 @@
                                                 <td><img src="{{ asset('storage/images/' . $hewan->gambar) }}"
                                                         alt="" width="150" class="rounded"></td>
                                                 <td>{{ $hewan->jenis_hewan }}</td>
+                                                <td>{{ $hewan->jenis_kelamin }}</td>
                                                 <td>Rp{{ $hewan->harga }}</td>
                                                 <td>
                                                     <a href="{{ route('hewan.show', ['hewan' => $hewan->id]) }}"

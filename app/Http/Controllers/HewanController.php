@@ -37,6 +37,7 @@ class HewanController extends Controller
 
         Hewan::create([
             'jenis_hewan' => $request->jenis_hewan,
+            'jenis_kelamin' => $request->jenis_kelamin,
             'harga' => $request->harga,
             'gambar' => $fileName,
             'status' => 'Avaliable'

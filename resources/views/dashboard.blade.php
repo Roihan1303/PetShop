@@ -7,7 +7,7 @@
             <hr>
             @if (auth()->user()->isAdmin == 1)
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <a href="{{ route('hewan.index') }}" class="col-12 col-md-6 col-lg-4 mb-3">
                         <div class="card text-primary border-primary">
                             <div class="card-body">
                                 <div class="row align-items-center">
@@ -21,8 +21,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    </a>
+                    <a href="{{ route('order.list') }}" class="col-12 col-md-6 col-lg-4 mb-3">
                         <div class="card text-primary border-primary">
                             <div class="card-body">
                                 <div class="row align-items-center">
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             @endif
             <section>
@@ -50,16 +50,19 @@
                                     <!-- Add 'height' and 'object-fit' here -->
                                     <div class="card-body">
                                         <h5 class="card-title m-0">{{ $hewan->jenis_hewan }}</h5>
+                                        <h6 class="card-title m-0">{{ $hewan->jenis_kelamin }}</h6>
                                         <p class="card-text">
                                             Rp. {{ $hewan->harga }}
                                         </p>
-                                        @if (auth()->user()->isAdmin == 0)
-                                            @if ($hewan->status == 'Avaliable')
+                                        @if ($hewan->status == 'Avaliable')
+                                            @if (auth()->user()->isAdmin == 1)
+                                                <button type="button" class="btn btn-primary">Available</button>
+                                            @else
                                                 <a href="{{ route('order.index', ['hewan' => $hewan->id]) }}"
                                                     class="btn btn-primary">Order</a>
-                                            @else
-                                                <button type="button" class="btn btn-danger">Sold</button>
                                             @endif
+                                        @else
+                                            <button type="button" class="btn btn-danger">Sold</button>
                                         @endif
                                     </div>
                                 </div>

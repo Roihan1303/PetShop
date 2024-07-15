@@ -17,6 +17,7 @@
                                             <th></th>
                                             <th>Nama Pembeli</th>
                                             <th>Jenis Hewan</th>
+                                            <th>Jenis Kelamin</th>
                                             <th>Alamat</th>
                                             <th>Pembayaran</th>
                                             <th>Total Harga</th>
@@ -30,6 +31,7 @@
                                                         alt="" width="150" class="rounded"></td>
                                                 <td>{{ $order->users->name }}</td>
                                                 <td>{{ $order->hewan->jenis_hewan }}</td>
+                                                <td>{{ $order->hewan->jenis_kelamin }}</td>
                                                 <td>{{ $order->alamat }}</td>
                                                 <td>{{ $order->pembayaran }}</td>
                                                 <td>Rp{{ $order->total_harga }}</td>

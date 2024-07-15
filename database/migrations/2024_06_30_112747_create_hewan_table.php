@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('hewan', function (Blueprint $table) {
             $table->id();
             $table->string('jenis_hewan');
+            $table->string('jenis_kelamin');
             $table->integer('harga');
             $table->string('gambar');
             $table->string('status');

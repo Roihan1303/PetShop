@@ -11,6 +11,7 @@ class Hewan extends Model
     protected $table = 'hewan';
     protected $fillable = [
         'jenis_hewan',
+        'jenis_kelamin',
         'harga',
         'gambar',
         'status'

@@ -33,6 +33,14 @@
                                 <label for="harga">Harga</label>
                                 <input type="number" name="harga" id="harga" class="form-control" required>
                             </div>
+                            <div class="mb-3">
+                                <label for="jenis_kelamin">Jenis Kelamin</label>
+                                <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
+                                    <option selected disabled>Pilih Jenis Kelamin</option>
+                                    <option value="Jantan">Jantan</option>
+                                    <option value="Betina">Betina</option>
+                                </select>
+                            </div>
                             <button class="btn btn-primary">Save</button>
                         </div>
                     </div>
